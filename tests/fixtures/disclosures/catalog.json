@@ -1,0 +1,33 @@
+[
+  {
+    "ticker": "FPT",
+    "source_document_id": "fixture-fpt-q1-2024-v1",
+    "title": "FPT Q1 2024 Financial Report",
+    "published_at": "2024-04-20T10:00:00+07:00",
+    "document_type": "periodic_report",
+    "is_correction": false,
+    "attachments": [
+      {
+        "filename": "fpt-q1-2024.pdf",
+        "download_reference": "fixture://tests/fixtures/disclosures/fpt-q1-2024.pdf",
+        "reported_mime_type": "application/pdf"
+      }
+    ]
+  },
+  {
+    "ticker": "FPT",
+    "source_document_id": "fixture-fpt-q1-2024-v2",
+    "title": "FPT Q1 2024 Financial Report (Correction)",
+    "published_at": "2024-04-20T14:00:00+07:00",
+    "document_type": "periodic_report",
+    "is_correction": true,
+    "supersedes_source_document_id": "fixture-fpt-q1-2024-v1",
+    "attachments": [
+      {
+        "filename": "fpt-q1-2024-corrected.pdf",
+        "download_reference": "fixture://tests/fixtures/disclosures/fpt-q1-2024-corrected.pdf",
+        "reported_mime_type": "application/pdf"
+      }
+    ]
+  }
+]

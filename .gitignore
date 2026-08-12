@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.env
+.venv/
+venv/
+*.log
+
+# Local real FS PDFs exported from MinIO (keep manifest/README only in git)
+tests/fixtures/processing/tables/fpt_real/*.pdf
+tests/fixtures/processing/tables/fpt_real/_preview/
+local/
+models/
+.agents/
+.codegraph/
+.cursor/
+IMPLEMENTATION_PLAN.md
+IMPLEMENTATION_STATUS.md
+CURSOR.md
+test_arial.pdf

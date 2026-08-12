@@ -1,0 +1,66 @@
+{
+  "name": "multiline_vi_label",
+  "tables": [
+    {
+      "page": 1,
+      "table_index": 0,
+      "cells": [
+        [
+          "Chỉ tiêu",
+          "Giá trị"
+        ],
+        [
+          "Doanh thu thuần\ntừ hợp đồng\nvới khách hàng",
+          "(1,234.50)"
+        ]
+      ],
+      "bbox": [
+        72.0,
+        80.0,
+        552.0,
+        192.0
+      ],
+      "cell_bboxes": [
+        [
+          [
+            72.0,
+            80.0,
+            312.0,
+            136.0
+          ],
+          [
+            312.0,
+            80.0,
+            552.0,
+            136.0
+          ]
+        ],
+        [
+          [
+            72.0,
+            136.0,
+            312.0,
+            192.0
+          ],
+          [
+            312.0,
+            136.0,
+            552.0,
+            192.0
+          ]
+        ]
+      ]
+    }
+  ],
+  "page_issues": [],
+  "source_matrix": [
+    [
+      "Chỉ tiêu",
+      "Giá trị"
+    ],
+    [
+      "Doanh thu thuần\ntừ hợp đồng\nvới khách hàng",
+      "(1,234.50)"
+    ]
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "doc": "DOC-14",
+  "description": "Golden processing fixtures for document processing review (G2).",
+  "policy": "Synthetic binaries are committed with meaningful expect blocks. Real issuer PDFs are local-only (gitignored) with committed pipeline/extraction expected JSON keyed by sha256.",
+  "targets": {
+    "digital_pdfs": 10,
+    "scanned_pdfs": 3,
+    "complex_tables": 3,
+    "excel_reports": 2,
+    "real_report_pipeline_goldens": 5
+  },
+  "g2_real_report_sample": [
+    "20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257_630f61f6ef9f",
+    "20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b_4fce6b21101d",
+    "20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9_5adaee07d5aa",
+    "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff",
+    "20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546_6034d952ce36"
+  ],
+  "counts": {
+    "digital_pdfs_committed": 12,
+    "scanned_pdfs_committed": 4,
+    "complex_tables_committed": 6,
+    "excel_reports_committed": 2,
+    "real_reports_with_pipeline_expected": 5
+  },
+  "items": [
+    {
+      "id": "vietnamese_sample",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/vietnamese_sample.pdf",
+      "role": "Vietnamese digital text",
+      "sha256": "cef164f7be4ba8e083484a8e7a130f236cd7483abf9ae90697453c2da2e2ae5a",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": true,
+        "min_tables": 0,
+        "min_text_blocks": 1,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [
+          "Doanh thu"
+        ],
+        "min_page1_chars": 20
+      }
+    },
+    {
+      "id": "exact_vi_grid",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/exact_vi_grid.pdf",
+      "role": "Exact VI table matrix",
+      "sha256": "dff0d813a698857fe7ab1fae6006d3c7669ea941f91caaa85e0ebefadfdde9c9",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 1,
+        "min_text_blocks": 4,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [],
+        "min_page1_chars": 20,
+        "expected_table_path": "tests/fixtures/processing/tables/exact_vi_grid.expected.json"
+      }
+    },
+    {
+      "id": "multiline_vi_label",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/multiline_vi_label.pdf",
+      "role": "Multiline VI label table",
+      "sha256": "9f9d581ac25b213240e513d889da1a250630641e17a7bd04c8e6875de4019927",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 1,
+        "min_text_blocks": 3,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [],
+        "min_page1_chars": 20,
+        "expected_table_path": "tests/fixtures/processing/tables/multiline_vi_label.expected.json"
+      }
+    },
+    {
+      "id": "narrative_adjacent",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/narrative_adjacent.pdf",
+      "role": "Table between narrative",
+      "sha256": "9d722e484f6a1f1346791deb824c8133eda16cea555ff33e297521d7d573a256",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 1,
+        "min_text_blocks": 7,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [
+          "FPT"
+        ],
+        "min_page1_chars": 20,
+        "expected_table_path": "tests/fixtures/processing/tables/narrative_adjacent.expected.json"
+      }
+    },
+    {
+      "id": "large_8x4",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/large_8x4.pdf",
+      "role": "Larger digital grid",
+      "sha256": "050a5bf3567fe26ad111a1a7d12600280b0ef167e4d69faa990b1b3cec9970c9",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 1,
+        "min_text_blocks": 8,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [],
+        "min_page1_chars": 20,
+        "expected_table_path": "tests/fixtures/processing/tables/large_8x4.expected.json"
+      }
+    },
+    {
+      "id": "page_spanning",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/page_spanning.pdf",
+      "role": "Page-local continuation tables",
+      "sha256": "9b41025009af4f18d3f1180d1b12ee4a65adfeedbc4a32a084e97debe70a2384",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 2,
+        "page_numbers": [
+          1,
+          2
+        ],
+        "needs_ocr": false,
+        "min_tables": 2,
+        "min_text_blocks": 6,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [],
+        "min_page1_chars": 20,
+        "expected_table_path": "tests/fixtures/processing/tables/page_spanning.expected.json"
+      }
+    },
+    {
+      "id": "false_positive_layout",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/false_positive_layout.pdf",
+      "role": "Ruled non-table layout",
+      "sha256": "f287fcf2ca6ff7f8760221eba7662883646266faccb7f7c840a27a9745c0cd59",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 0,
+        "min_text_blocks": 5,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [
+          "FPT"
+        ],
+        "min_page1_chars": 20,
+        "expected_table_path": "tests/fixtures/processing/tables/false_positive_layout.expected.json"
+      }
+    },
+    {
+      "id": "two_tables_page",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/two_tables_page.pdf",
+      "role": "Two tables on one page",
+      "sha256": "94d6a68b8bfb07387d296d9b9d6a79107c105ea33731f2888fc2f9d9e6bb3b67",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 2,
+        "min_text_blocks": 5,
+        "sections_found": [],
+        "document_class": "other",
+        "text_contains_any": [],
+        "min_page1_chars": 20,
+        "expected_table_path": "tests/fixtures/processing/tables/two_tables_page.expected.json"
+      }
+    },
+    {
+      "id": "fs_section_headings",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/digital/fs_section_headings.pdf",
+      "role": "FS section heading detection",
+      "sha256": "332e10421d08314b7f213b2e56b05271cd13fd4dd74d8b334ca001066ab7ac02",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 0,
+        "min_text_blocks": 5,
+        "sections_found": [
+          "balance_sheet",
+          "income_statement",
+          "cash_flow_statement",
+          "notes"
+        ],
+        "document_class": "management_explanation",
+        "text_contains_any": [
+          "Doanh thu",
+          "BANG CAN DOI",
+          "LUU CHUYEN"
+        ],
+        "min_page1_chars": 20
+      }
+    },
+    {
+      "id": "board_resolution_vi",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/digital/board_resolution_vi.pdf",
+      "role": "Non-FS digital disclosure text",
+      "sha256": "69f3bb23117f82a447acba8e8650b98a897d8f37360ec42a8fb9e747feecb49c",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 0,
+        "min_text_blocks": 2,
+        "sections_found": [],
+        "document_class": "board_resolution",
+        "text_contains_any": [
+          "NGHI QUYET",
+          "FPT"
+        ],
+        "min_page1_chars": 20
+      }
+    },
+    {
+      "id": "real_vi_bctc_sample",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/digital/real_vi_bctc_sample.pdf",
+      "role": "Synthetic Vietnamese native-text financial report",
+      "sha256": "3d8c155076fefdccb40de9b45492c2e2b7a7d0c42e54dab32d53158beb7123df",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 2,
+        "page_numbers": [
+          1,
+          2
+        ],
+        "needs_ocr": false,
+        "min_tables": 0,
+        "min_text_blocks": 10,
+        "sections_found": [
+          "balance_sheet",
+          "income_statement"
+        ],
+        "document_class": "financial_statement",
+        "text_contains_any": [],
+        "min_page1_chars": 20
+      }
+    },
+    {
+      "id": "real_vi_ir_announcement",
+      "kind": "digital_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/digital/real_vi_ir_announcement.pdf",
+      "role": "Synthetic Vietnamese native-text IR announcement",
+      "sha256": "a74c9a6a921599adaa5e3bc41e2bd1f0ad4e539a66fc5ca55d1fdae3d68d8e36",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "PDF",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": false,
+        "min_tables": 0,
+        "min_text_blocks": 5,
+        "sections_found": [
+          "income_statement"
+        ],
+        "document_class": "board_resolution",
+        "text_contains_any": [
+          "FPT"
+        ],
+        "min_page1_chars": 20
+      }
+    },
+    {
+      "id": "image_only_page",
+      "kind": "scanned_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/scanned/image_only_page.pdf",
+      "role": "Image-only page (needs_ocr)",
+      "sha256": "cecccea3532e189523f0fff7926f014cad0d0454760fb7fa1e3e258e0781631c",
+      "source": "synthetic",
+      "expect": {
+        "needs_ocr": true,
+        "file_type": "PDF"
+      }
+    },
+    {
+      "id": "low_text_high_image",
+      "kind": "scanned_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/scanned/low_text_high_image.pdf",
+      "role": "Low text + high image coverage",
+      "sha256": "6443dd3e4618781821da7107368c62757b0954c5813a16c4cef860ab837519ba",
+      "source": "synthetic",
+      "expect": {
+        "needs_ocr": true,
+        "file_type": "PDF"
+      }
+    },
+    {
+      "id": "sparse_scan_page",
+      "kind": "scanned_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/scanned/sparse_scan_page.pdf",
+      "role": "Sparse text scan-like page",
+      "sha256": "afa69291f6b19e2e64b0dc97dbd2ff1c4ed1df61e36b0f3465ef616924f42d89",
+      "source": "synthetic",
+      "expect": {
+        "needs_ocr": true,
+        "file_type": "PDF"
+      }
+    },
+    {
+      "id": "mixed_native_and_scan",
+      "kind": "scanned_pdf",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/scanned/mixed_native_and_scan.pdf",
+      "role": "Mixed native+scan OCR golden",
+      "sha256": "282cad9ba1009241fdb32279d8584af7661943314b895a78bf0ffb91551b3c77",
+      "source": "synthetic",
+      "ocr_expected_path": "tests/fixtures/processing/golden/scanned/mixed_native_and_scan.ocr.expected.json",
+      "expect": {
+        "needs_ocr": true,
+        "file_type": "PDF",
+        "has_native_and_ocr_pages": true
+      }
+    },
+    {
+      "id": "complex_exact_vi_grid",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/exact_vi_grid.pdf",
+      "expected_path": "tests/fixtures/processing/tables/exact_vi_grid.expected.json",
+      "role": "Complex digital table: exact_vi_grid",
+      "sha256": "dff0d813a698857fe7ab1fae6006d3c7669ea941f91caaa85e0ebefadfdde9c9",
+      "source": "synthetic"
+    },
+    {
+      "id": "complex_large_8x4",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/large_8x4.pdf",
+      "expected_path": "tests/fixtures/processing/tables/large_8x4.expected.json",
+      "role": "Complex digital table: large_8x4",
+      "sha256": "050a5bf3567fe26ad111a1a7d12600280b0ef167e4d69faa990b1b3cec9970c9",
+      "source": "synthetic"
+    },
+    {
+      "id": "complex_two_tables_page",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/two_tables_page.pdf",
+      "expected_path": "tests/fixtures/processing/tables/two_tables_page.expected.json",
+      "role": "Complex digital table: two_tables_page",
+      "sha256": "94d6a68b8bfb07387d296d9b9d6a79107c105ea33731f2888fc2f9d9e6bb3b67",
+      "source": "synthetic"
+    },
+    {
+      "id": "fpt_raw_q2_2026_consol_bs_p3",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_bs_p3.json",
+      "role": "Vetted FPT raster transcription for reconstruction",
+      "sha256": "bbcec152cb5bd731851422f09d0f0eeb38ea947c9c378b56fd96813b72e943d1",
+      "source": "vetted_transcription",
+      "format": "raw_table_json"
+    },
+    {
+      "id": "fpt_raw_q2_2026_consol_is_p7",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_is_p7.json",
+      "role": "Vetted FPT raster transcription for reconstruction",
+      "sha256": "49586518eb2db29655a23bd5454e64f65592e7c7d8102bd2521e3212b45b3110",
+      "source": "vetted_transcription",
+      "format": "raw_table_json"
+    },
+    {
+      "id": "fpt_raw_q2_2026_consol_cf_p10",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_cf_p10.json",
+      "role": "Vetted FPT raster transcription for reconstruction",
+      "sha256": "6db1045957252c190c2fb02f6e4eb5de33daf67cf932621eb9e70e50227b6a84",
+      "source": "vetted_transcription",
+      "format": "raw_table_json"
+    },
+    {
+      "id": "fs_balance_sheet",
+      "kind": "excel_report",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/excel/fs_balance_sheet.xlsx",
+      "role": "Excel fs_balance_sheet",
+      "sha256": "29e1ec684cd5740527795fafda98f561f126dddd65570244df72d90b5b5d6fa9",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "XLSX",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": null,
+        "min_tables": 1,
+        "min_text_blocks": 0,
+        "sections_found": [
+          "balance_sheet"
+        ],
+        "document_class": "financial_statement",
+        "section": "balance_sheet"
+      }
+    },
+    {
+      "id": "fs_income_statement",
+      "kind": "excel_report",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/golden/excel/fs_income_statement.xlsx",
+      "role": "Excel fs_income_statement",
+      "sha256": "343313a92862ba54ff46700f55a64db4547baf952ed145dac1e1958a4f344ceb",
+      "source": "synthetic",
+      "expect": {
+        "file_type": "XLSX",
+        "page_count": 1,
+        "page_numbers": [
+          1
+        ],
+        "needs_ocr": null,
+        "min_tables": 1,
+        "min_text_blocks": 0,
+        "sections_found": [
+          "income_statement"
+        ],
+        "document_class": "financial_statement",
+        "section": "income_statement"
+      }
+    },
+    {
+      "id": "20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257_630f61f6ef9f",
+      "kind": "real_report",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257_630f61f6ef9f.pdf",
+      "role": "Audited Consolidated Financial Statements of 2025",
+      "sha256": "630f61f6ef9f07d5c593c3bf8f65bad1d56ecbb091921296ed5c4e830ea070a4",
+      "artifact_id": "33932ca4-8256-40a1-8d59-1c8ad9477e93",
+      "source": "issuer_ir_export",
+      "note": "PDF gitignored; refresh via scripts.export_pdf_fixtures",
+      "pipeline_expected_path": "tests/fixtures/processing/golden/real_reports/20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257_630f61f6ef9f.pipeline.expected.json",
+      "g2_review_sample": true
+    },
+    {
+      "id": "20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b_4fce6b21101d",
+      "kind": "real_report",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b_4fce6b21101d.pdf",
+      "role": "Audited Separate Financial Statements of 2025",
+      "sha256": "4fce6b21101d5918eac95363e10c337a3d31366d94439baf1dbdf5f990d43211",
+      "artifact_id": "68bc51f2-44f9-491e-a294-ebcd3e22ae4e",
+      "source": "issuer_ir_export",
+      "note": "PDF gitignored; refresh via scripts.export_pdf_fixtures",
+      "pipeline_expected_path": "tests/fixtures/processing/golden/real_reports/20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b_4fce6b21101d.pipeline.expected.json",
+      "g2_review_sample": true
+    },
+    {
+      "id": "20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9_5adaee07d5aa",
+      "kind": "real_report",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9_5adaee07d5aa.pdf",
+      "role": "Information disclosure Consolidated Financial Statements for 1st quarter of 2026",
+      "sha256": "5adaee07d5aa1c5a16b2992ac20db480dc03dd9c02e61d0f361e6df479ec7012",
+      "artifact_id": "e6c67530-63fd-4f9f-973d-1f89a9bab95d",
+      "source": "issuer_ir_export",
+      "note": "PDF gitignored; refresh via scripts.export_pdf_fixtures",
+      "pipeline_expected_path": "tests/fixtures/processing/golden/real_reports/20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9_5adaee07d5aa.pipeline.expected.json",
+      "g2_review_sample": true
+    },
+    {
+      "id": "20260424_fpt_bctc_rieng_quy_1_nam_2026_4bcdf6ea7d_11c9709914cd",
+      "kind": "real_report",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260424_fpt_bctc_rieng_quy_1_nam_2026_4bcdf6ea7d_11c9709914cd.pdf",
+      "role": "Information disclosure Separate Financial Statements for 1st quarter of 2026",
+      "sha256": "11c9709914cdc5f1561f47045283598c359f7466f94e5ffbc21893e28b0315fa",
+      "artifact_id": "73e9ef2d-5f3a-42a7-8b23-4781e629616c",
+      "source": "issuer_ir_export",
+      "note": "PDF gitignored; refresh via scripts.export_pdf_fixtures"
+    },
+    {
+      "id": "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff",
+      "kind": "real_report",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pdf",
+      "role": "Information disclosure Consolidated financial statement for 2nd quarter of 2026",
+      "sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+      "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+      "source": "issuer_ir_export",
+      "note": "PDF gitignored; refresh via scripts.export_pdf_fixtures",
+      "pipeline_expected_path": "tests/fixtures/processing/golden/real_reports/20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pipeline.expected.json",
+      "g2_review_sample": true
+    },
+    {
+      "id": "20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546_6034d952ce36",
+      "kind": "real_report",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546_6034d952ce36.pdf",
+      "role": "Information disclosure Separate financial statement for 2nd quarter of 2026",
+      "sha256": "6034d952ce3655bc089b483ca9643f855293eeb8f93fd8d50474a3dfee9f9fd8",
+      "artifact_id": "d3c48274-990e-4cc3-a27b-5795ee63ba74",
+      "source": "issuer_ir_export",
+      "note": "PDF gitignored; refresh via scripts.export_pdf_fixtures",
+      "pipeline_expected_path": "tests/fixtures/processing/golden/real_reports/20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546_6034d952ce36.pipeline.expected.json",
+      "g2_review_sample": true
+    },
+    {
+      "id": "20260422_fpt_tcbc_kqkd_quy_1_nam_2026_7516c99981_d478ac3bcf9f",
+      "kind": "real_report",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260422_fpt_tcbc_kqkd_quy_1_nam_2026_7516c99981_d478ac3bcf9f.pdf",
+      "role": "Information disclosure FPT's financial performance of Q1/2026",
+      "sha256": "d478ac3bcf9fda2561d2213d023e7909cc9c0f90dbd717da998e9c5f3d7e6e40",
+      "artifact_id": "0051901b-32f8-4964-963f-2bf5f4e46700",
+      "source": "issuer_ir_export",
+      "note": "PDF gitignored; refresh via scripts.export_pdf_fixtures"
+    },
+    {
+      "id": "q2_2026_consol_bs_is_cf_pages",
+      "kind": "real_raster_table_pages",
+      "storage": "local_only",
+      "path": "tests/fixtures/processing/tables/fpt_real/20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pdf",
+      "role": "Q2 2026 consol BS/IS/CF native extraction expectation",
+      "sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+      "source": "issuer_ir_export",
+      "extraction_expected_path": "tests/fixtures/processing/golden/real_reports/q2_2026_consol_bs_is_cf_pages.extraction.expected.json",
+      "g2_review_sample": true
+    }
+  ]
+}

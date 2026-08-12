@@ -1,0 +1,266 @@
+{
+  "slug": "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff",
+  "sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+  "file_type": "PDF",
+  "status": "NEEDS_REVIEW",
+  "warnings": [
+    "ocr_required_but_engine_not_configured",
+    "table_extraction_needs_review"
+  ],
+  "page_count": 49,
+  "page_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "classification": {
+    "document_class": "financial_statement",
+    "method": "pattern",
+    "min_confidence": 0.5
+  },
+  "ocr_decision": {
+    "needs_ocr": true,
+    "reason": "pages_require_ocr",
+    "pages_needing_ocr": 48,
+    "pages": [
+      {
+        "page": 1,
+        "needs_ocr": false,
+        "reason": "sufficient_native_text"
+      },
+      {
+        "page": 2,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 3,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 4,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 5,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 6,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 7,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 8,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 9,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 10,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 11,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 12,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 13,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 14,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      },
+      {
+        "page": 15,
+        "needs_ocr": true,
+        "reason": "low_text_high_image_coverage"
+      }
+    ]
+  },
+  "sections_found": [],
+  "section_hits_sample": [],
+  "native_tables": 0,
+  "table_page_issues_sample": [
+    {
+      "page": 1,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 2,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 3,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 4,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 5,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 6,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 7,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 8,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 9,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 10,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 11,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 12,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 13,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 14,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 15,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 16,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 17,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 18,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 19,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    },
+    {
+      "page": 20,
+      "status": "NEEDS_REVIEW",
+      "reason": "no_tables_detected"
+    }
+  ],
+  "table_page_issue_reasons": [
+    "no_tables_detected"
+  ],
+  "text_span_checks": [
+    {
+      "page": 1,
+      "min_chars": 50,
+      "contains_any": [
+        "FPT"
+      ]
+    }
+  ]
+}

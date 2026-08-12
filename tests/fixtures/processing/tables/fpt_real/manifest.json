@@ -1,0 +1,76 @@
+{
+  "source": "postgres+minio export",
+  "count": 7,
+  "items": [
+    {
+      "slug": "20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257_630f61f6ef9f",
+      "filename": "20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257.pdf",
+      "artifact_id": "33932ca4-8256-40a1-8d59-1c8ad9477e93",
+      "publication_title": "Audited Consolidated Financial Statements of 2025",
+      "sha256": "630f61f6ef9f07d5c593c3bf8f65bad1d56ecbb091921296ed5c4e830ea070a4",
+      "object_path": "raw_objects/630f61f6/630f61f6ef9f07d5c593c3bf8f65bad1d56ecbb091921296ed5c4e830ea070a4/blob",
+      "size_bytes": 8039102,
+      "local_path": "tests/fixtures/processing/tables/fpt_real/20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257_630f61f6ef9f.pdf"
+    },
+    {
+      "slug": "20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b_4fce6b21101d",
+      "filename": "20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b.pdf",
+      "artifact_id": "68bc51f2-44f9-491e-a294-ebcd3e22ae4e",
+      "publication_title": "Audited Separate Financial Statements of 2025",
+      "sha256": "4fce6b21101d5918eac95363e10c337a3d31366d94439baf1dbdf5f990d43211",
+      "object_path": "raw_objects/4fce6b21/4fce6b21101d5918eac95363e10c337a3d31366d94439baf1dbdf5f990d43211/blob",
+      "size_bytes": 5136497,
+      "local_path": "tests/fixtures/processing/tables/fpt_real/20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b_4fce6b21101d.pdf"
+    },
+    {
+      "slug": "20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9_5adaee07d5aa",
+      "filename": "20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9.pdf",
+      "artifact_id": "e6c67530-63fd-4f9f-973d-1f89a9bab95d",
+      "publication_title": "Information disclosure Consolidated Financial Statements for 1st quarter of 2026",
+      "sha256": "5adaee07d5aa1c5a16b2992ac20db480dc03dd9c02e61d0f361e6df479ec7012",
+      "object_path": "raw_objects/5adaee07/5adaee07d5aa1c5a16b2992ac20db480dc03dd9c02e61d0f361e6df479ec7012/blob",
+      "size_bytes": 2721355,
+      "local_path": "tests/fixtures/processing/tables/fpt_real/20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9_5adaee07d5aa.pdf"
+    },
+    {
+      "slug": "20260424_fpt_bctc_rieng_quy_1_nam_2026_4bcdf6ea7d_11c9709914cd",
+      "filename": "20260424_fpt_bctc_rieng_quy_1_nam_2026_4bcdf6ea7d.pdf",
+      "artifact_id": "73e9ef2d-5f3a-42a7-8b23-4781e629616c",
+      "publication_title": "Information disclosure Separate Financial Statements for 1st quarter of 2026",
+      "sha256": "11c9709914cdc5f1561f47045283598c359f7466f94e5ffbc21893e28b0315fa",
+      "object_path": "raw_objects/11c97099/11c9709914cdc5f1561f47045283598c359f7466f94e5ffbc21893e28b0315fa/blob",
+      "size_bytes": 1705483,
+      "local_path": "tests/fixtures/processing/tables/fpt_real/20260424_fpt_bctc_rieng_quy_1_nam_2026_4bcdf6ea7d_11c9709914cd.pdf"
+    },
+    {
+      "slug": "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff",
+      "filename": "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3.pdf",
+      "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+      "publication_title": "Information disclosure Consolidated financial statement for 2nd quarter of 2026",
+      "sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+      "object_path": "raw_objects/024b14f8/024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60/blob",
+      "size_bytes": 2715026,
+      "local_path": "tests/fixtures/processing/tables/fpt_real/20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pdf"
+    },
+    {
+      "slug": "20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546_6034d952ce36",
+      "filename": "20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546.pdf",
+      "artifact_id": "d3c48274-990e-4cc3-a27b-5795ee63ba74",
+      "publication_title": "Information disclosure Separate financial statement for 2nd quarter of 2026",
+      "sha256": "6034d952ce3655bc089b483ca9643f855293eeb8f93fd8d50474a3dfee9f9fd8",
+      "object_path": "raw_objects/6034d952/6034d952ce3655bc089b483ca9643f855293eeb8f93fd8d50474a3dfee9f9fd8/blob",
+      "size_bytes": 1617297,
+      "local_path": "tests/fixtures/processing/tables/fpt_real/20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546_6034d952ce36.pdf"
+    },
+    {
+      "slug": "20260422_fpt_tcbc_kqkd_quy_1_nam_2026_7516c99981_d478ac3bcf9f",
+      "filename": "20260422_fpt_tcbc_kqkd_quy_1_nam_2026_7516c99981.pdf",
+      "artifact_id": "0051901b-32f8-4964-963f-2bf5f4e46700",
+      "publication_title": "Information disclosure FPT's financial performance of Q1/2026",
+      "sha256": "d478ac3bcf9fda2561d2213d023e7909cc9c0f90dbd717da998e9c5f3d7e6e40",
+      "object_path": "raw_objects/d478ac3b/d478ac3bcf9fda2561d2213d023e7909cc9c0f90dbd717da998e9c5f3d7e6e40/blob",
+      "size_bytes": 1217306,
+      "local_path": "tests/fixtures/processing/tables/fpt_real/20260422_fpt_tcbc_kqkd_quy_1_nam_2026_7516c99981_d478ac3bcf9f.pdf"
+    }
+  ]
+}

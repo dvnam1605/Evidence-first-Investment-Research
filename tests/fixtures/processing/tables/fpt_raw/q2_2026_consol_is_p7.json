@@ -1,0 +1,1360 @@
+{
+  "source": {
+    "ticker": "FPT",
+    "document": "Q2 2026 consolidated FS",
+    "pdf": "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pdf",
+    "sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+    "usage": "visual transcription verified against source PDF page; native find_tables returns none",
+    "page_visual_size": [
+      842.04,
+      595.44
+    ],
+    "bbox_note": "cell bboxes are visual-layout estimates, not OCR-measured",
+    "pdf_page": 7,
+    "printed_page": 6,
+    "section": "income_statement",
+    "verified_against": "source PDF page 7 / printed 6"
+  },
+  "context": {
+    "surrounding_text": "CONSOLIDATED INCOME STATEMENT\nFor the period from 01 January 2026 to 30 June 2026\nFORM B 02-DN/HN\nUnit: VND\n",
+    "section_hint": "income_statement"
+  },
+  "table": {
+    "page": 7,
+    "table_index": 0,
+    "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+    "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+    "source_sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+    "bbox": [
+      28,
+      130,
+      816,
+      284
+    ],
+    "extractor_name": "raw_table_fixture",
+    "extractor_version": "vetted-visual-q2-2026",
+    "source_label": "FORM B 02-DN/HN",
+    "confidence": 0.8,
+    "status": "OK",
+    "warnings": [
+      "bbox_estimated_from_visual_layout"
+    ],
+    "rows": [
+      {
+        "row_index": 0,
+        "cells": [
+          {
+            "raw_text": "CONSOLIDATED INCOME STATEMENT",
+            "row": 0,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              130,
+              308,
+              144
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              130,
+              356,
+              144
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              130,
+              404,
+              144
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              130,
+              514,
+              144
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              130,
+              624,
+              144
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              130,
+              734,
+              144
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              130,
+              844,
+              144
+            ],
+            "is_merged_continuation": true
+          }
+        ]
+      },
+      {
+        "row_index": 1,
+        "cells": [
+          {
+            "raw_text": "Unit: VND",
+            "row": 1,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              144,
+              308,
+              158
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              144,
+              356,
+              158
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              144,
+              404,
+              158
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              144,
+              514,
+              158
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              144,
+              624,
+              158
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              144,
+              734,
+              158
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              144,
+              844,
+              158
+            ],
+            "is_merged_continuation": true
+          }
+        ]
+      },
+      {
+        "row_index": 2,
+        "cells": [
+          {
+            "raw_text": "ITEMS",
+            "row": 2,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              158,
+              308,
+              172
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "Codes",
+            "row": 2,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              158,
+              356,
+              172
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "Notes",
+            "row": 2,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              158,
+              404,
+              172
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "Quarter II",
+            "row": 2,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              158,
+              514,
+              172
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 2,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              158,
+              624,
+              172
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "Year to date",
+            "row": 2,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              158,
+              734,
+              172
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 2,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              158,
+              844,
+              172
+            ],
+            "is_merged_continuation": true
+          }
+        ]
+      },
+      {
+        "row_index": 3,
+        "cells": [
+          {
+            "raw_text": "",
+            "row": 3,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              172,
+              308,
+              186
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 3,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              172,
+              356,
+              186
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 3,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              172,
+              404,
+              186
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2026",
+            "row": 3,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              172,
+              514,
+              186
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2025",
+            "row": 3,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              172,
+              624,
+              186
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2026",
+            "row": 3,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              172,
+              734,
+              186
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2025",
+            "row": 3,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              172,
+              844,
+              186
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 4,
+        "cells": [
+          {
+            "raw_text": "1 Gross revenue from goods sold and services rendered",
+            "row": 4,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              186,
+              308,
+              200
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "01",
+            "row": 4,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              186,
+              356,
+              200
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 4,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              186,
+              404,
+              200
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "13,810,340,987,151",
+            "row": 4,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              186,
+              514,
+              200
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "16,658,335,760,739",
+            "row": 4,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              186,
+              624,
+              200
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "26,296,177,691,503",
+            "row": 4,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              186,
+              734,
+              200
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "32,723,316,152,003",
+            "row": 4,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              186,
+              844,
+              200
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 5,
+        "cells": [
+          {
+            "raw_text": "3 Net revenue from goods sold and services rendered",
+            "row": 5,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              200,
+              308,
+              214
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "10",
+            "row": 5,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              200,
+              356,
+              214
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "25",
+            "row": 5,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              200,
+              404,
+              214
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "13,788,503,461,199",
+            "row": 5,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              200,
+              514,
+              214
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "16,624,713,040,067",
+            "row": 5,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              200,
+              624,
+              214
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "26,268,500,667,974",
+            "row": 5,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              200,
+              734,
+              214
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "32,682,853,982,527",
+            "row": 5,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              200,
+              844,
+              214
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 6,
+        "cells": [
+          {
+            "raw_text": "7 Financial expenses",
+            "row": 6,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              214,
+              308,
+              228
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "23",
+            "row": 6,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              214,
+              356,
+              228
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "28",
+            "row": 6,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              214,
+              404,
+              228
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "300,452,278,414",
+            "row": 6,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              214,
+              514,
+              228
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "531,385,256,080",
+            "row": 6,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              214,
+              624,
+              228
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "667,663,663,135",
+            "row": 6,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              214,
+              734,
+              228
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "842,729,025,444",
+            "row": 6,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              214,
+              844,
+              228
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 7,
+        "cells": [
+          {
+            "raw_text": "  In which: Borrowing expenses",
+            "row": 7,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              228,
+              308,
+              242
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "24",
+            "row": 7,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              228,
+              356,
+              242
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 7,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              228,
+              404,
+              242
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "212,582,739,626",
+            "row": 7,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              228,
+              514,
+              242
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "216,761,295,705",
+            "row": 7,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              228,
+              624,
+              242
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "392,043,947,290",
+            "row": 7,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              228,
+              734,
+              242
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "369,150,834,038",
+            "row": 7,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              228,
+              844,
+              242
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 8,
+        "cells": [
+          {
+            "raw_text": "18 Net profit after corporate income tax",
+            "row": 8,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              242,
+              308,
+              256
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "60",
+            "row": 8,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              242,
+              356,
+              256
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 8,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              242,
+              404,
+              256
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2,570,406,121,615",
+            "row": 8,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              242,
+              514,
+              256
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2,740,271,400,678",
+            "row": 8,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              242,
+              624,
+              256
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "5,047,195,955,096",
+            "row": 8,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              242,
+              734,
+              256
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "5,335,828,880,987",
+            "row": 8,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              242,
+              844,
+              256
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 9,
+        "cells": [
+          {
+            "raw_text": "  - Equity holders of the Holding Company",
+            "row": 9,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              256,
+              308,
+              270
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "61",
+            "row": 9,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              256,
+              356,
+              270
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 9,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              256,
+              404,
+              270
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2,567,654,036,428",
+            "row": 9,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              256,
+              514,
+              270
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2,257,462,588,123",
+            "row": 9,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              256,
+              624,
+              270
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "5,055,025,623,527",
+            "row": 9,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              256,
+              734,
+              270
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "4,431,763,974,648",
+            "row": 9,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              256,
+              844,
+              270
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 10,
+        "cells": [
+          {
+            "raw_text": "19 Basic earnings per share",
+            "row": 10,
+            "column": 0,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              28,
+              270,
+              308,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "70",
+            "row": 10,
+            "column": 1,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              308,
+              270,
+              356,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "29",
+            "row": 10,
+            "column": 2,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              356,
+              270,
+              404,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "1,507",
+            "row": 10,
+            "column": 3,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              404,
+              270,
+              514,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "1,329",
+            "row": 10,
+            "column": 4,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              514,
+              270,
+              624,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2,967",
+            "row": 10,
+            "column": 5,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              624,
+              270,
+              734,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2,613",
+            "row": 10,
+            "column": 6,
+            "page": 7,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p7:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              734,
+              270,
+              844,
+              284
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "status": "OK",
+    "warnings": [
+      "bbox_estimated_from_visual_layout"
+    ],
+    "table_type": "income_statement",
+    "unit_text": "Unit: VND",
+    "header_band_row_indices": [
+      2,
+      3
+    ],
+    "label_column_index": 0,
+    "column_headers": [
+      "ITEMS",
+      "Codes",
+      "Notes",
+      "Quarter II | 2026",
+      "Quarter II | 2025",
+      "Year to date | 2026",
+      "Year to date | 2025"
+    ],
+    "column_roles": [
+      "label",
+      "code",
+      "note",
+      "value",
+      "value",
+      "value",
+      "value"
+    ],
+    "data": [
+      {
+        "label": "1 Gross revenue from goods sold and services rendered",
+        "values": [
+          "13,810,340,987,151",
+          "16,658,335,760,739",
+          "26,296,177,691,503",
+          "32,723,316,152,003"
+        ],
+        "kind": "data"
+      },
+      {
+        "label": "3 Net revenue from goods sold and services rendered",
+        "values": [
+          "13,788,503,461,199",
+          "16,624,713,040,067",
+          "26,268,500,667,974",
+          "32,682,853,982,527"
+        ],
+        "kind": "data"
+      },
+      {
+        "label": "7 Financial expenses",
+        "values": [
+          "300,452,278,414",
+          "531,385,256,080",
+          "667,663,663,135",
+          "842,729,025,444"
+        ],
+        "kind": "data"
+      },
+      {
+        "label": "  In which: Borrowing expenses",
+        "values": [
+          "212,582,739,626",
+          "216,761,295,705",
+          "392,043,947,290",
+          "369,150,834,038"
+        ],
+        "kind": "data",
+        "indent_spaces": 2
+      },
+      {
+        "label": "18 Net profit after corporate income tax",
+        "values": [
+          "2,570,406,121,615",
+          "2,740,271,400,678",
+          "5,047,195,955,096",
+          "5,335,828,880,987"
+        ],
+        "kind": "data"
+      },
+      {
+        "label": "  - Equity holders of the Holding Company",
+        "values": [
+          "2,567,654,036,428",
+          "2,257,462,588,123",
+          "5,055,025,623,527",
+          "4,431,763,974,648"
+        ],
+        "kind": "data",
+        "indent_spaces": 2
+      },
+      {
+        "label": "19 Basic earnings per share",
+        "values": [
+          "1,507",
+          "1,329",
+          "2,967",
+          "2,613"
+        ],
+        "kind": "data"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+HOSE disclosure endpoint probe snapshot
+Captured: 2026-08-11
+Command: uv run python scripts/probe_hose.py
+
+Request URL:
+https://www.hsx.vn/Modules/Listed/Web/DisclosureList?pageFieldName1=Code&pageFieldValue1=FPT&pageFieldOperator1=eq&pageCriteriaLength=1&_search=false&rows=3&page=1&sidx=PublicDate&sord=desc
+
+Response status: 200
+Content-Type: text/html
+Body length: 1900 bytes
+SHA256: 7dbc4cffdf9c1d349b5ccee75bc821264966cb80d929345fb20bca8ef6d454c5
+
+Body prefix (first 300 characters):
+<!doctype html><html lang="vi"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><meta 

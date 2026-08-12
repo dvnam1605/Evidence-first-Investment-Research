@@ -1,0 +1,844 @@
+{
+  "source": {
+    "ticker": "FPT",
+    "document": "Q2 2026 consolidated FS",
+    "pdf": "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pdf",
+    "sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+    "usage": "visual transcription verified against source PDF page; native find_tables returns none",
+    "page_visual_size": [
+      842.04,
+      595.44
+    ],
+    "bbox_note": "cell bboxes are visual-layout estimates, not OCR-measured",
+    "pdf_page": 10,
+    "printed_page": 9,
+    "section": "cash_flow_statement",
+    "verified_against": "source PDF page 10 / printed 9"
+  },
+  "context": {
+    "surrounding_text": "CONSOLIDATED CASH FLOW STATEMENT\nFor the period from 01 January 2026 to 30 June 2026\nFORM B 03-DN/HN\nUnit: VND\n",
+    "section_hint": "cash_flow_statement"
+  },
+  "table": {
+    "page": 10,
+    "table_index": 0,
+    "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+    "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+    "source_sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+    "bbox": [
+      36,
+      140,
+      821,
+      316
+    ],
+    "extractor_name": "raw_table_fixture",
+    "extractor_version": "vetted-visual-q2-2026",
+    "source_label": "FORM B 03-DN/HN",
+    "confidence": 0.8,
+    "status": "OK",
+    "warnings": [
+      "bbox_estimated_from_visual_layout"
+    ],
+    "rows": [
+      {
+        "row_index": 0,
+        "cells": [
+          {
+            "raw_text": "CONSOLIDATED CASH FLOW STATEMENT",
+            "row": 0,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              140,
+              456,
+              156
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              140,
+              511,
+              156
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              140,
+              666,
+              156
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 0,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              140,
+              821,
+              156
+            ],
+            "is_merged_continuation": true
+          }
+        ]
+      },
+      {
+        "row_index": 1,
+        "cells": [
+          {
+            "raw_text": "Unit: VND",
+            "row": 1,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              156,
+              456,
+              172
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              156,
+              511,
+              172
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              156,
+              666,
+              172
+            ],
+            "is_merged_continuation": true
+          },
+          {
+            "raw_text": "",
+            "row": 1,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              156,
+              821,
+              172
+            ],
+            "is_merged_continuation": true
+          }
+        ]
+      },
+      {
+        "row_index": 2,
+        "cells": [
+          {
+            "raw_text": "ITEMS",
+            "row": 2,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              172,
+              456,
+              188
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "Codes",
+            "row": 2,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              172,
+              511,
+              188
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "Year to date",
+            "row": 2,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              172,
+              666,
+              188
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 2,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              172,
+              821,
+              188
+            ],
+            "is_merged_continuation": true
+          }
+        ]
+      },
+      {
+        "row_index": 3,
+        "cells": [
+          {
+            "raw_text": "",
+            "row": 3,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              188,
+              456,
+              204
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 3,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              188,
+              511,
+              204
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2026",
+            "row": 3,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              188,
+              666,
+              204
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "2025",
+            "row": 3,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              188,
+              821,
+              204
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 4,
+        "cells": [
+          {
+            "raw_text": "I. CASH FLOWS FROM OPERATING ACTIVITIES",
+            "row": 4,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              204,
+              456,
+              220
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 4,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              204,
+              511,
+              220
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 4,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              204,
+              666,
+              220
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 4,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              204,
+              821,
+              220
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 5,
+        "cells": [
+          {
+            "raw_text": "1. Profit before tax",
+            "row": 5,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              220,
+              456,
+              236
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "01",
+            "row": 5,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              220,
+              511,
+              236
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "5,714,320,093,652",
+            "row": 5,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              220,
+              666,
+              236
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "6,165,726,095,309",
+            "row": 5,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              220,
+              821,
+              236
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 6,
+        "cells": [
+          {
+            "raw_text": "2. Adjustments for:",
+            "row": 6,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              236,
+              456,
+              252
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 6,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              236,
+              511,
+              252
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 6,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              236,
+              666,
+              252
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "",
+            "row": 6,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              236,
+              821,
+              252
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 7,
+        "cells": [
+          {
+            "raw_text": "  Provisions",
+            "row": 7,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              252,
+              456,
+              268
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "03",
+            "row": 7,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              252,
+              511,
+              268
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "(176,282,525,295)",
+            "row": 7,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              252,
+              666,
+              268
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "143,067,844,348",
+            "row": 7,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              252,
+              821,
+              268
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 8,
+        "cells": [
+          {
+            "raw_text": "Net cash generated by/(used in) operating activities",
+            "row": 8,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              268,
+              456,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "20",
+            "row": 8,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              268,
+              511,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "(1,144,550,905,787)",
+            "row": 8,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              268,
+              666,
+              284
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "1,683,573,278,329",
+            "row": 8,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              268,
+              821,
+              284
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 9,
+        "cells": [
+          {
+            "raw_text": "7. Cash and cash equivalents of the subsidiary upon loss of control",
+            "row": 9,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              284,
+              456,
+              300
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "26b",
+            "row": 9,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              284,
+              511,
+              300
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "(713,425,316,747)",
+            "row": 9,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              284,
+              666,
+              300
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "-",
+            "row": 9,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              284,
+              821,
+              300
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      },
+      {
+        "row_index": 10,
+        "cells": [
+          {
+            "raw_text": "Net cash generated by / (used in) investing activities",
+            "row": 10,
+            "column": 0,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              36,
+              300,
+              456,
+              316
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "30",
+            "row": 10,
+            "column": 1,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              456,
+              300,
+              511,
+              316
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "(3,579,683,989,854)",
+            "row": 10,
+            "column": 2,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              511,
+              300,
+              666,
+              316
+            ],
+            "is_merged_continuation": false
+          },
+          {
+            "raw_text": "(7,233,991,769,335)",
+            "row": 10,
+            "column": 3,
+            "page": 10,
+            "table_id": "d19429df-c97c-45d8-8304-9741378cc96d:p10:t0",
+            "artifact_id": "d19429df-c97c-45d8-8304-9741378cc96d",
+            "bbox": [
+              666,
+              300,
+              821,
+              316
+            ],
+            "is_merged_continuation": false
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "status": "OK",
+    "warnings": [
+      "bbox_estimated_from_visual_layout"
+    ],
+    "table_type": "cash_flow_statement",
+    "unit_text": "Unit: VND",
+    "header_band_row_indices": [
+      2,
+      3
+    ],
+    "label_column_index": 0,
+    "column_headers": [
+      "ITEMS",
+      "Codes",
+      "Year to date | 2026",
+      "Year to date | 2025"
+    ],
+    "column_roles": [
+      "label",
+      "code",
+      "value",
+      "value"
+    ],
+    "data": [
+      {
+        "label": "I. CASH FLOWS FROM OPERATING ACTIVITIES",
+        "values": [
+          "",
+          ""
+        ],
+        "kind": "section_header"
+      },
+      {
+        "label": "1. Profit before tax",
+        "values": [
+          "5,714,320,093,652",
+          "6,165,726,095,309"
+        ],
+        "kind": "data"
+      },
+      {
+        "label": "2. Adjustments for:",
+        "values": [
+          "",
+          ""
+        ],
+        "kind": "section_header"
+      },
+      {
+        "label": "  Provisions",
+        "values": [
+          "(176,282,525,295)",
+          "143,067,844,348"
+        ],
+        "kind": "data",
+        "indent_spaces": 2
+      },
+      {
+        "label": "Net cash generated by/(used in) operating activities",
+        "values": [
+          "(1,144,550,905,787)",
+          "1,683,573,278,329"
+        ],
+        "kind": "data"
+      },
+      {
+        "label": "7. Cash and cash equivalents of the subsidiary upon loss of control",
+        "values": [
+          "(713,425,316,747)",
+          "-"
+        ],
+        "kind": "data"
+      },
+      {
+        "label": "Net cash generated by / (used in) investing activities",
+        "values": [
+          "(3,579,683,989,854)",
+          "(7,233,991,769,335)"
+        ],
+        "kind": "data"
+      }
+    ]
+  }
+}

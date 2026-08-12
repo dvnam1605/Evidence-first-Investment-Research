@@ -1,0 +1,53 @@
+{
+  "id": "mixed_native_and_scan",
+  "path": "tests/fixtures/processing/golden/scanned/mixed_native_and_scan.pdf",
+  "sha256": "282cad9ba1009241fdb32279d8584af7661943314b895a78bf0ffb91551b3c77",
+  "native_page_1_contains": [
+    "Doanh thu",
+    "NATIVE_KEEP"
+  ],
+  "page_1_needs_ocr": false,
+  "page_2_needs_ocr": true,
+  "fake_ocr": {
+    "engine": "fake-ocr",
+    "pages": {
+      "2": {
+        "text": "BANG CAN DOI KE TOAN\\nTien mat 1,000",
+        "confidence": 0.93,
+        "lines": [
+          {
+            "text": "BANG CAN DOI KE TOAN",
+            "confidence": 0.95,
+            "bbox": [
+              10,
+              10,
+              200,
+              30
+            ]
+          },
+          {
+            "text": "Tien mat 1,000",
+            "confidence": 0.91,
+            "bbox": [
+              10,
+              40,
+              180,
+              55
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "expect_after_ocr": {
+    "ocr_page_count": 1,
+    "ocr_text_contains": [
+      "BANG CAN DOI",
+      "Tien mat"
+    ],
+    "native_page_1_unchanged_contains": [
+      "NATIVE_KEEP"
+    ],
+    "status_not": "FAILED"
+  }
+}

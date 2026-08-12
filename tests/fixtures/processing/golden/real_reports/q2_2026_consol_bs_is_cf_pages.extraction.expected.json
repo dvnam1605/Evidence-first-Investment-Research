@@ -1,0 +1,59 @@
+{
+  "id": "q2_2026_consol_bs_is_cf_pages",
+  "pdf": "20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pdf",
+  "sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60",
+  "local_path": "tests\\fixtures\\processing\\tables\\fpt_real\\20260727_FPT_Consolidated_Financial_Statements_for_Q22026_055fe1ecd3_024b14f8ceff.pdf",
+  "pages": {
+    "3": {
+      "statement": "balance_sheet",
+      "native_table_count": 0,
+      "page_issues": [
+        {
+          "status": "NEEDS_REVIEW",
+          "reason": "no_tables_detected",
+          "detail": "page has embedded images but find_tables returned none"
+        }
+      ],
+      "expect_reason_in": [
+        "no_tables_detected"
+      ],
+      "extraction_status": "NEEDS_REVIEW",
+      "note": "Raster statement page: native find_tables yields no grid; reconstruction uses fpt_raw vetted JSON",
+      "raw_table_fixture": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_bs_p3.json"
+    },
+    "7": {
+      "statement": "income_statement",
+      "native_table_count": 0,
+      "page_issues": [
+        {
+          "status": "NEEDS_REVIEW",
+          "reason": "no_tables_detected",
+          "detail": "page has embedded images but find_tables returned none"
+        }
+      ],
+      "expect_reason_in": [
+        "no_tables_detected"
+      ],
+      "extraction_status": "NEEDS_REVIEW",
+      "note": "Raster statement page: native find_tables yields no grid; reconstruction uses fpt_raw vetted JSON",
+      "raw_table_fixture": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_is_p7.json"
+    },
+    "10": {
+      "statement": "cash_flow_statement",
+      "native_table_count": 0,
+      "page_issues": [
+        {
+          "status": "NEEDS_REVIEW",
+          "reason": "no_tables_detected",
+          "detail": "page has embedded images but find_tables returned none"
+        }
+      ],
+      "expect_reason_in": [
+        "no_tables_detected"
+      ],
+      "extraction_status": "NEEDS_REVIEW",
+      "note": "Raster statement page: native find_tables yields no grid; reconstruction uses fpt_raw vetted JSON",
+      "raw_table_fixture": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_cf_p10.json"
+    }
+  }
+}
