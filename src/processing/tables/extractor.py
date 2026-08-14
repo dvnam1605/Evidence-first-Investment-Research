@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+from collections.abc import Sequence
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 from uuid import UUID
@@ -65,12 +66,9 @@ def _make_table_id(
 
 
 def _bbox_from_tuple(raw: object) -> BoundingBox | None:
-    if raw is None:
+    if isinstance(raw, (str, bytes)) or not isinstance(raw, Sequence):
         return None
-    try:
-        values = list(raw)  # type: ignore[arg-type]
-    except TypeError:
-        return None
+    values = raw
     if len(values) < 4:
         return None
     try:

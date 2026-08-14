@@ -1,0 +1,39 @@
+{
+  "source": {
+    "ticker": "FPT",
+    "document": "Q2 2026 separate financial statements",
+    "pdf": "20260727_FPT_Separarate_Financial_Statements_for_Q22026_494daa3546_6034d952ce36.pdf",
+    "sha256": "6034d952ce3655bc089b483ca9643f855293eeb8f93fd8d50474a3dfee9f9fd8",
+    "usage": "visually verified balance-sheet region; native find_tables returns none",
+    "pdf_page": 4,
+    "printed_page": 3,
+    "section": "balance_sheet",
+    "verified_against": "source PDF page 4 / printed 3"
+  },
+  "context": {
+    "surrounding_text": "BALANCE SHEET\nAs at 30 June 2026\nUnit: VND",
+    "section_hint": "balance_sheet"
+  },
+  "table": {
+    "page": 4,
+    "table_index": 0,
+    "table_id": "fpt-q2-2026-separate:p4:t0",
+    "source_sha256": "6034d952ce3655bc089b483ca9643f855293eeb8f93fd8d50474a3dfee9f9fd8",
+    "bbox": [50, 105, 545, 395],
+    "extractor_name": "vetted_visual_region",
+    "extractor_version": "2026-08-12",
+    "source_label": "BALANCE SHEET",
+    "confidence": 0.8,
+    "status": "NEEDS_REVIEW",
+    "warnings": ["partial_statement_region", "cell_bboxes_estimated_from_verified_region"],
+    "matrix": [
+      ["BALANCE SHEET"],
+      ["ASSETS", "Mã số", "Notes", "30/06/2026", "31/12/2025"],
+      ["CURRENT ASSETS", "100", "", "10.509.464.631.417", "13.998.282.834.060"],
+      ["Cash and cash equivalents", "110", "1", "2.655.261.460.729", "1.905.249.672.046"],
+      ["Cash", "111", "", "268.261.460.729", "765.249.672.046"],
+      ["Cash equivalents", "112", "", "2.387.000.000.000", "1.140.000.000.000"],
+      ["Short-term financial investments", "120", "2", "6.577.105.093.011", "8.248.873.292.933"]
+    ]
+  }
+}

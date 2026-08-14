@@ -31,5 +31,7 @@ uv run python -m scripts.export_pdf_fixtures
 ```
 
 Output: `fpt_real/*.pdf` (gitignored) + `fpt_real/manifest.json`.
-Raster FPT statements have no native `find_tables` grids. Reconstruction goldens
-use vetted raw tables under `fpt_raw/` (`JsonRawTableSource`).
+Raster FPT statements have no native `find_tables` grids. Production can load
+vetted SHA-bound raw-table sidecars from `PROCESSING_RAW_TABLE_DIR`; the
+pipeline rejects sidecars whose declared SHA does not match the active PDF.
+The committed examples live under `fpt_raw/` (`JsonRawTableSource`).

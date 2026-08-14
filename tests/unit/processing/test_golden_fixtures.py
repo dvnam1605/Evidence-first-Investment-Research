@@ -224,7 +224,14 @@ def test_complex_table_expected_or_raw_json_loadable() -> None:
         if item.get("format") == "raw_table_json":
             table, payload = load_raw_table_fixture(path)
             assert table.row_count >= 1
-            assert "expected" in payload
+            if "expected" in payload:
+                assert payload["expected"]
+            else:
+                source = payload.get("source", {})
+                assert source.get("sha256") == table.source_sha256
+                assert table.status.value == "NEEDS_REVIEW"
+                assert "partial_statement_region" in table.warnings
+                assert "cell_bboxes_estimated_from_verified_region" in table.warnings
             continue
         expected = item.get("expected_path")
         assert expected, item["id"]

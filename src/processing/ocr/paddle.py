@@ -28,7 +28,7 @@ def _paddleocr_version() -> str:
 
 def _import_paddle_ocr() -> Any:
     try:
-        from paddleocr import PaddleOCR  # type: ignore[import-not-found]
+        from paddleocr import PaddleOCR  # type: ignore[import-untyped]
     except ImportError as exc:
         raise OCRFailure(
             "paddleocr is not installed; install optional extra: "

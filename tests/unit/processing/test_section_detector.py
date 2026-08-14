@@ -55,6 +55,21 @@ def test_notes_preferred_over_loose_matches() -> None:
     assert hits[0].matched_rule.startswith("vi_")
 
 
+def test_notes_column_inside_balance_sheet_header_is_not_a_section_heading() -> None:
+    hits = StatementSectionDetector().detect_text(
+        "Mã số TÀI SẢN Thuyết minh 2025 VND 2024 VND\n"
+    )
+
+    assert hits == []
+
+
+def test_short_notes_heading_remains_supported() -> None:
+    hits = StatementSectionDetector().detect_text("Thuyết minh\n")
+
+    assert len(hits) == 1
+    assert hits[0].section is StatementSection.NOTES
+
+
 def test_english_fallback_headings() -> None:
     hits = StatementSectionDetector().detect_text(
         "Consolidated statement of financial position\nAs at 31 December 2025\n"

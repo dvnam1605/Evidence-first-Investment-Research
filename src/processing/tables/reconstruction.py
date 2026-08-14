@@ -151,6 +151,16 @@ class ReconstructedTable:
                 "table_id": raw.table_id,
                 "page": raw.page,
                 "table_index": raw.table_index,
+                "document_id": None if raw.document_id is None else str(raw.document_id),
+                "artifact_id": None if raw.artifact_id is None else str(raw.artifact_id),
+                "source_sha256": raw.source_sha256,
+                "source_label": raw.source_label,
+                "extractor_name": raw.extractor_name,
+                "extractor_version": raw.extractor_version,
+                "confidence": raw.confidence,
+                "status": raw.status.value,
+                "warnings": list(raw.warnings),
+                "bbox": None if raw.bbox is None else raw.bbox.as_list(),
                 "row_count": raw.row_count,
                 "column_count": raw.column_count,
                 "cells": [
@@ -180,9 +190,15 @@ def _cell_ref(cell: ExtractedCell) -> dict[str, object]:
     return {
         "row": cell.row,
         "column": cell.column,
+        "page": cell.page,
+        "table_id": cell.table_id,
+        "document_id": None if cell.document_id is None else str(cell.document_id),
+        "artifact_id": None if cell.artifact_id is None else str(cell.artifact_id),
         "raw_text": cell.raw_text,
         "bbox": None if cell.bbox is None else cell.bbox.as_list(),
+        "bbox_estimated": cell.bbox_estimated,
         "is_merged_continuation": cell.is_merged_continuation,
+        "bbox_missing_warning": cell.bbox_missing_warning,
     }
 
 

@@ -286,22 +286,23 @@ async def main() -> None:
             }
         )
 
-    for name in [
-        "q2_2026_consol_bs_p3",
-        "q2_2026_consol_is_p7",
-        "q2_2026_consol_cf_p10",
-    ]:
-        path = ROOT / "tables" / "fpt_raw" / f"{name}.json"
+    for path in sorted((ROOT / "tables" / "fpt_raw").glob("*.json")):
+        name = path.stem
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        source = payload.get("source", {})
         items.append(
             {
                 "id": f"fpt_raw_{name}",
                 "kind": "complex_table",
                 "storage": "committed",
                 "path": path.relative_to(REPO).as_posix(),
-                "role": "Vetted FPT raster transcription for reconstruction",
+                "role": source.get(
+                    "document", "Vetted FPT raster transcription for reconstruction"
+                ),
                 "sha256": sha(path),
                 "source": "vetted_transcription",
                 "format": "raw_table_json",
+                "source_pdf_sha256": source.get("sha256"),
             }
         )
 

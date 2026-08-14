@@ -38,6 +38,9 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src", "apps"]
 
+[tool.hatch.build.targets.wheel.force-include]
+"tests/fixtures/processing/tables/fpt_raw" = "src/processing/assets/fpt_raw"
+
 [tool.ruff]
 target-version = "py312"
 line-length = 100

@@ -21,7 +21,9 @@ from src.processing.pdf.service import PDFParser
 from src.processing.sections.detector import StatementSectionDetector
 from src.processing.sections.models import SectionDetectionResult, StatementSection
 from src.processing.tables import (
+    ExtractedTable,
     FinancialTableReconstructor,
+    RawTableSource,
     ReconstructedTable,
     ReconstructionContext,
     ReconstructStatus,
@@ -110,6 +112,7 @@ class DocumentProcessor:
         tables: TableExtractionService | None = None,
         reconstructor: TableReconstructor | None = None,
         ocr_engine: OCREngine | None = None,
+        raw_table_source: RawTableSource | None = None,
     ) -> None:
         self._file_types = file_types or FileTypeDetector()
         self._pdf = pdf_parser or PDFParser(ocr_engine=ocr_engine)
@@ -119,6 +122,7 @@ class DocumentProcessor:
         self._tables = tables or TableExtractionService()
         self._reconstructor = reconstructor or FinancialTableReconstructor()
         self._ocr_engine = ocr_engine
+        self._raw_table_source = raw_table_source
 
     async def process(self, request: DocumentProcessRequest) -> DocumentProcessingResult:
         detected = self._file_types.detect(request.data, filename=request.filename)
@@ -235,21 +239,45 @@ class DocumentProcessor:
                 if ocr_sections.hits:
                     sections = _merge_section_hits(sections, ocr_sections)
 
-        table_extraction = self._tables.extract_pdf(
-            request.data,
-            context=TableExtractionContext(
-                document_id=request.artifact_id,
-                artifact_id=request.artifact_id,
-                source_sha256=parsed.source_sha256,
-                source_label=request.filename,
-            ),
+        table_context = TableExtractionContext(
+            document_id=request.artifact_id,
+            artifact_id=request.artifact_id,
+            source_sha256=parsed.source_sha256,
+            source_label=request.filename,
         )
+        try:
+            table_extraction = self._tables.extract_pdf(
+                request.data,
+                context=table_context,
+            )
+        except ProcessingError as exc:
+            warnings.append(f"table_extraction_failed:{type(exc).__name__}")
+            warnings.append(str(exc)[:200])
+            table_extraction = TableExtractionResult(
+                tables=(),
+                context=table_context,
+            )
+
+        raw_tables = self._load_raw_tables(
+            source_sha256=parsed.source_sha256,
+            context=table_context,
+            warnings=warnings,
+        )
+        if raw_tables is not None:
+            warnings.extend(raw_tables.warnings)
+            table_extraction = _merge_table_extractions(table_extraction, raw_tables)
+            raw_sections = self._sections.detect_page_texts(_table_page_texts(raw_tables))
+            if raw_sections.hits:
+                sections = _merge_section_hits(sections, raw_sections)
         if table_extraction.needs_review:
             warnings.append("table_extraction_needs_review")
 
         reconstructed = self._reconstruct_tables(
             table_extraction,
-            page_texts={page.page_number: page.text for page in parsed.pages},
+            page_texts=_merge_page_texts(
+                {page.page_number: page.text for page in parsed.pages},
+                _table_page_texts(raw_tables) if raw_tables is not None else (),
+            ),
             sections=sections,
             warnings=warnings,
         )
@@ -420,6 +448,25 @@ class DocumentProcessor:
             out.append(rebuilt)
         return tuple(out)
 
+    def _load_raw_tables(
+        self,
+        *,
+        source_sha256: str,
+        context: TableExtractionContext,
+        warnings: list[str],
+    ) -> TableExtractionResult | None:
+        if self._raw_table_source is None:
+            return None
+        try:
+            return self._raw_table_source.load_for(
+                source_sha256=source_sha256,
+                context=context,
+            )
+        except Exception as exc:  # noqa: BLE001 - an external sidecar must be observable
+            warnings.append(f"raw_table_source_failed:{type(exc).__name__}")
+            warnings.append(str(exc)[:200])
+            return None
+
     def _failed(
         self,
         request: DocumentProcessRequest,
@@ -491,8 +538,80 @@ def _merge_section_hits(
         seen.add(key)
     return SectionDetectionResult(
         hits=tuple(merged),
-        method=f"{primary.method}+ocr_text",
+        method=f"{primary.method}+supplemental_text",
     )
+
+
+def _merge_table_extractions(
+    native: TableExtractionResult,
+    raw: TableExtractionResult,
+) -> TableExtractionResult:
+    """Replace only overlapping full grids; partial sidecars supplement native output."""
+    native_tables = tuple(
+        table
+        for table in native.tables
+        if not any(_raw_table_replaces_native(candidate, table) for candidate in raw.tables)
+    )
+    return TableExtractionResult(
+        tables=tuple(
+            sorted(
+                native_tables + raw.tables,
+                key=lambda table: (table.page, table.table_index),
+            )
+        ),
+        page_issues=native.page_issues + raw.page_issues,
+        context=raw.context,
+        warnings=native.warnings + raw.warnings,
+    )
+
+
+def _raw_table_replaces_native(raw: ExtractedTable, native: ExtractedTable) -> bool:
+    if raw.page != native.page or "partial_statement_region" in raw.warnings:
+        return False
+    if raw.bbox is None or native.bbox is None:
+        return False
+    overlap_width = max(
+        0.0,
+        min(raw.bbox.x1, native.bbox.x1) - max(raw.bbox.x0, native.bbox.x0),
+    )
+    overlap_height = max(
+        0.0,
+        min(raw.bbox.y1, native.bbox.y1) - max(raw.bbox.y0, native.bbox.y0),
+    )
+    overlap = overlap_width * overlap_height
+    raw_area = (raw.bbox.x1 - raw.bbox.x0) * (raw.bbox.y1 - raw.bbox.y0)
+    native_area = (native.bbox.x1 - native.bbox.x0) * (native.bbox.y1 - native.bbox.y0)
+    smaller_area = min(raw_area, native_area)
+    return smaller_area > 0 and overlap / smaller_area >= 0.8
+
+
+def _table_page_texts(
+    extraction: TableExtractionResult,
+) -> tuple[tuple[int, str], ...]:
+    by_page: dict[int, list[str]] = {}
+    for table in extraction.tables:
+        lines = by_page.setdefault(table.page, [])
+        for row in table.rows:
+            text = " ".join(cell.raw_text for cell in row.cells if cell.raw_text)
+            if text:
+                lines.append(text)
+    return tuple(
+        (page, "\n".join(lines))
+        for page, lines in sorted(by_page.items())
+        if lines
+    )
+
+
+def _merge_page_texts(
+    primary: dict[int, str],
+    extra: tuple[tuple[int, str], ...],
+) -> dict[int, str]:
+    merged = dict(primary)
+    for page, text in extra:
+        if not text:
+            continue
+        merged[page] = "\n".join(part for part in (merged.get(page, ""), text) if part)
+    return merged
 
 
 def _terminal_status(warnings: list[str]) -> ProcessingStatus:
@@ -500,6 +619,8 @@ def _terminal_status(warnings: list[str]) -> ProcessingStatus:
         "ocr_required_but_engine_not_configured",
         "ocr_needs_review",
         "ocr_failed",
+        "raw_table_source_failed",
+        "table_extraction_failed",
         "table_extraction_needs_review",
         "table_reconstruction_needs_review",
         "classification_unmatched",
@@ -553,27 +674,27 @@ def _pdf_blocks(
             )
 
     if ocr is not None:
-        for page in ocr.pages:
+        for ocr_page in ocr.pages:
             drafts.append(
                 PipelineBlockDraft(
-                    page_number=page.page_number,
-                    block_index=next_index(page.page_number),
+                    page_number=ocr_page.page_number,
+                    block_index=next_index(ocr_page.page_number),
                     block_type=BlockType.TEXT,
                     bbox=None,
                     content={
                         "source": "ocr",
-                        "engine": page.engine,
-                        "engine_version": page.engine_version,
-                        "text": page.text,
-                        "confidence": page.confidence,
-                        "status": page.status.value,
-                        "quality_reason": page.quality_reason,
-                        "decision_reason": page.decision_reason,
-                        "raw": list(page.raw),
+                        "engine": ocr_page.engine,
+                        "engine_version": ocr_page.engine_version,
+                        "text": ocr_page.text,
+                        "confidence": ocr_page.confidence,
+                        "status": ocr_page.status.value,
+                        "quality_reason": ocr_page.quality_reason,
+                        "decision_reason": ocr_page.decision_reason,
+                        "raw": list(ocr_page.raw),
                     },
                 )
             )
-            if page.status is OCRResultStatus.NEEDS_REVIEW:
+            if ocr_page.status is OCRResultStatus.NEEDS_REVIEW:
                 # Already flagged via ocr_needs_review at pipeline level.
                 pass
 

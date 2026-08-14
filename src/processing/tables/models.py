@@ -37,6 +37,7 @@ class ExtractedCell:
     document_id: UUID | None = None
     artifact_id: UUID | None = None
     bbox: BoundingBox | None = None
+    bbox_estimated: bool = False
     # True when this grid slot is a visual continuation of a merged cell (no own text).
     is_merged_continuation: bool = False
     bbox_missing_warning: str | None = None
@@ -93,9 +94,12 @@ class TableExtractionResult:
     tables: tuple[ExtractedTable, ...]
     page_issues: tuple[PageTableExtractionIssue, ...] = ()
     context: TableExtractionContext = field(default_factory=TableExtractionContext)
+    warnings: tuple[str, ...] = ()
 
     @property
     def needs_review(self) -> bool:
+        if self.warnings:
+            return True
         if any(t.status != TableExtractionStatus.OK for t in self.tables):
             return True
         return any(

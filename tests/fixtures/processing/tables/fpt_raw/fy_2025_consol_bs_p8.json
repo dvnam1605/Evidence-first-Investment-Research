@@ -1,0 +1,39 @@
+{
+  "source": {
+    "ticker": "FPT",
+    "document": "FY 2025 consolidated financial statements",
+    "pdf": "20260319_fpt_bctc_hop_nhat_nam_2025_da_kiem_toan_0159f59257_630f61f6ef9f.pdf",
+    "sha256": "630f61f6ef9f07d5c593c3bf8f65bad1d56ecbb091921296ed5c4e830ea070a4",
+    "usage": "visually verified balance-sheet region; native find_tables returns none",
+    "pdf_page": 8,
+    "printed_page": 5,
+    "section": "balance_sheet",
+    "verified_against": "source PDF page 8 / printed 5"
+  },
+  "context": {
+    "surrounding_text": "BẢNG CÂN ĐỐI KẾ TOÁN HỢP NHẤT\nTại ngày 31 tháng 12 năm 2025\nĐơn vị: VND",
+    "section_hint": "balance_sheet"
+  },
+  "table": {
+    "page": 8,
+    "table_index": 0,
+    "table_id": "fpt-fy2025-consol:p8:t0",
+    "source_sha256": "630f61f6ef9f07d5c593c3bf8f65bad1d56ecbb091921296ed5c4e830ea070a4",
+    "bbox": [45, 100, 550, 355],
+    "extractor_name": "vetted_visual_region",
+    "extractor_version": "2026-08-12",
+    "source_label": "BẢNG CÂN ĐỐI KẾ TOÁN HỢP NHẤT",
+    "confidence": 0.8,
+    "status": "NEEDS_REVIEW",
+    "warnings": ["partial_statement_region", "cell_bboxes_estimated_from_verified_region"],
+    "matrix": [
+      ["BẢNG CÂN ĐỐI KẾ TOÁN HỢP NHẤT"],
+      ["Mã số", "TÀI SẢN", "Thuyết minh", "2025 VND", "2024 VND"],
+      ["100", "TÀI SẢN NGẮN HẠN", "", "58.137.438.254.908", "45.535.942.846.453"],
+      ["110", "Tiền và các khoản tương đương tiền", "4", "10.522.105.729.992", "9.315.440.438.884"],
+      ["111", "Tiền", "", "8.084.751.080.186", "7.526.619.929.289"],
+      ["112", "Các khoản tương đương tiền", "", "2.437.354.649.806", "2.589.820.509.595"],
+      ["120", "Đầu tư tài chính ngắn hạn", "", "29.630.986.737.440", "21.785.213.686.808"]
+    ]
+  }
+}

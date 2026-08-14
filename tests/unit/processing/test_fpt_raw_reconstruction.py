@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from src.processing.sections.models import StatementSection
@@ -61,6 +62,8 @@ def _assert_fixture(name: str) -> None:
             assert cell.table_id == table.table_id
             assert cell.bbox is not None
             assert cell.bbox.x1 > cell.bbox.x0
+            if "bbox_estimated_from_visual_layout" in table.warnings:
+                assert cell.bbox_estimated is True
 
     payload_dict = result.to_intermediate_dict()
     assert payload_dict["provenance"]["page"] == source["pdf_page"]
@@ -86,3 +89,29 @@ def test_json_raw_table_source_loads_all_statement_fixtures() -> None:
     assert len(result.tables) == 3
     assert [t.page for t in result.tables] == [3, 7, 10]
     assert result.context.source_sha256 is not None
+
+
+def test_compact_vetted_matrix_expands_cell_provenance(tmp_path: Path) -> None:
+    path = tmp_path / "compact.json"
+    path.write_text(
+        json.dumps(
+            {
+                "table": {
+                    "table_id": "fixture:p1:t0",
+                    "page": 1,
+                    "bbox": [10, 20, 210, 120],
+                    "matrix": [["Header", "2026"], ["Revenue", "1,000"]],
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    table, _ = load_raw_table_fixture(path)
+
+    cell = table.rows[1].cells[1]
+    assert cell.raw_text == "1,000"
+    assert cell.row == 1 and cell.column == 1 and cell.page == 1
+    assert cell.bbox is not None
+    assert cell.bbox.as_list() == [110.0, 70.0, 210.0, 120.0]
+    assert cell.bbox_estimated is True

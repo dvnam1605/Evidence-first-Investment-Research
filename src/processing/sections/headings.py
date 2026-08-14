@@ -45,13 +45,17 @@ HEADING_RULES: tuple[HeadingRule, ...] = tuple(
         (
             _rule(
                 StatementSection.NOTES,
-                rf"\b("
-                rf"thuyet{_SEP}minh{_SEP}bao{_SEP}cao{_SEP}tai{_SEP}chinh|"
-                rf"thuyet{_SEP}minh"
-                rf")\b",
+                rf"^thuyet{_SEP}minh{_SEP}bao{_SEP}cao{_SEP}tai{_SEP}chinh(?:\b.*)?$",
                 0.92,
                 "vi_notes",
                 priority=100,
+            ),
+            _rule(
+                StatementSection.NOTES,
+                rf"^thuyet{_SEP}minh$",
+                0.75,
+                "vi_notes_short_heading",
+                priority=30,
             ),
             _rule(
                 StatementSection.BALANCE_SHEET,

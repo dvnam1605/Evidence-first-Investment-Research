@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 from pydantic import ValidationError
 from src.config.settings import (
@@ -11,6 +13,7 @@ from src.config.settings import (
     EmbeddingSettings,
     LLMSettings,
     ObjectStorageSettings,
+    ProcessingSettings,
     RedisSettings,
     Settings,
 )
@@ -23,6 +26,7 @@ def test_settings_load_with_required_values(monkeypatch: pytest.MonkeyPatch) -> 
     monkeypatch.setenv("OBJECT_STORAGE_ACCESS_KEY", "minioadmin")
     monkeypatch.setenv("OBJECT_STORAGE_SECRET_KEY", "minioadmin")
     monkeypatch.setenv("OBJECT_STORAGE_BUCKET", "research")
+    monkeypatch.setenv("LLM_MODEL", "gpt-4o")
 
     settings = Settings()
 
@@ -63,7 +67,27 @@ def test_app_settings_defaults() -> None:
     assert settings.log_level == "INFO"
 
 
-def test_llm_and_embedding_defaults() -> None:
+def test_processing_settings_accepts_optional_raw_table_directory(tmp_path: Path) -> None:
+    settings = ProcessingSettings(raw_table_dir=tmp_path, _env_file=None)
+
+    assert settings.raw_table_dir == tmp_path
+    assert settings.stale_job_after_seconds == 3600
+
+
+def test_processing_settings_treats_blank_raw_table_directory_as_unset() -> None:
+    settings = ProcessingSettings(raw_table_dir="", _env_file=None)
+
+    assert settings.raw_table_dir is None
+
+
+def test_llm_and_embedding_defaults(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("LLM_API_KEY", raising=False)
+    monkeypatch.delenv("LLM_MODEL", raising=False)
+    monkeypatch.delenv("LLM_BASE_URL", raising=False)
+    monkeypatch.delenv("EMBEDDING_MODEL", raising=False)
+    monkeypatch.delenv("EMBEDDING_DIMENSIONS", raising=False)
+    monkeypatch.delenv("CRAWLER_USER_AGENT", raising=False)
+    monkeypatch.delenv("CRAWLER_RATE_LIMIT_SECONDS", raising=False)
     llm = LLMSettings(_env_file=None)
     embedding = EmbeddingSettings(_env_file=None)
     crawler = CrawlerSettings(_env_file=None)

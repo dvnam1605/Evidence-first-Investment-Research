@@ -1,0 +1,39 @@
+{
+  "source": {
+    "ticker": "FPT",
+    "document": "Q1 2026 consolidated financial statements",
+    "pdf": "20260424_fpt_bctc_hop_nhat_quy_1_nam_2026_d03fbbebf9_5adaee07d5aa.pdf",
+    "sha256": "5adaee07d5aa1c5a16b2992ac20db480dc03dd9c02e61d0f361e6df479ec7012",
+    "usage": "visually verified balance-sheet region; native find_tables returns none",
+    "pdf_page": 3,
+    "printed_page": 2,
+    "section": "balance_sheet",
+    "verified_against": "source PDF page 3 / printed 2"
+  },
+  "context": {
+    "surrounding_text": "BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHẤT\nTại ngày 31 tháng 03 năm 2026\nĐơn vị: VND",
+    "section_hint": "balance_sheet"
+  },
+  "table": {
+    "page": 3,
+    "table_index": 0,
+    "table_id": "fpt-q1-2026-consol:p3:t0",
+    "source_sha256": "5adaee07d5aa1c5a16b2992ac20db480dc03dd9c02e61d0f361e6df479ec7012",
+    "bbox": [50, 105, 545, 395],
+    "extractor_name": "vetted_visual_region",
+    "extractor_version": "2026-08-12",
+    "source_label": "BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHẤT",
+    "confidence": 0.8,
+    "status": "NEEDS_REVIEW",
+    "warnings": ["partial_statement_region", "cell_bboxes_estimated_from_verified_region"],
+    "matrix": [
+      ["BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHẤT"],
+      ["TÀI SẢN", "Mã số", "Thuyết minh", "31/03/2026", "31/12/2025"],
+      ["TÀI SẢN NGẮN HẠN", "100", "", "41.527.873.060.120", "58.137.438.254.908"],
+      ["Tiền và các khoản tương đương tiền", "110", "5", "7.993.577.611.642", "10.522.105.729.992"],
+      ["Tiền", "111", "", "5.022.685.693.032", "8.084.751.080.186"],
+      ["Các khoản tương đương tiền", "112", "", "2.970.891.918.610", "2.437.354.649.806"],
+      ["Các khoản đầu tư tài chính ngắn hạn", "120", "", "18.751.535.880.407", "30.024.547.484.655"]
+    ]
+  }
+}

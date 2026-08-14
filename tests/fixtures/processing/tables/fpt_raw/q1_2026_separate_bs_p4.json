@@ -1,0 +1,39 @@
+{
+  "source": {
+    "ticker": "FPT",
+    "document": "Q1 2026 separate financial statements",
+    "pdf": "20260424_fpt_bctc_rieng_quy_1_nam_2026_4bcdf6ea7d_11c9709914cd.pdf",
+    "sha256": "11c9709914cdc5f1561f47045283598c359f7466f94e5ffbc21893e28b0315fa",
+    "usage": "visually verified balance-sheet region; native find_tables returns none",
+    "pdf_page": 4,
+    "printed_page": 3,
+    "section": "balance_sheet",
+    "verified_against": "source PDF page 4 / printed 3"
+  },
+  "context": {
+    "surrounding_text": "BÁO CÁO TÌNH HÌNH TÀI CHÍNH\nTại ngày 31 tháng 03 năm 2026\nĐơn vị: VND",
+    "section_hint": "balance_sheet"
+  },
+  "table": {
+    "page": 4,
+    "table_index": 0,
+    "table_id": "fpt-q1-2026-separate:p4:t0",
+    "source_sha256": "11c9709914cdc5f1561f47045283598c359f7466f94e5ffbc21893e28b0315fa",
+    "bbox": [50, 105, 545, 395],
+    "extractor_name": "vetted_visual_region",
+    "extractor_version": "2026-08-12",
+    "source_label": "BÁO CÁO TÌNH HÌNH TÀI CHÍNH",
+    "confidence": 0.8,
+    "status": "NEEDS_REVIEW",
+    "warnings": ["partial_statement_region", "cell_bboxes_estimated_from_verified_region"],
+    "matrix": [
+      ["BÁO CÁO TÌNH HÌNH TÀI CHÍNH"],
+      ["TÀI SẢN", "Mã số", "Thuyết minh", "31/03/2026", "31/12/2025"],
+      ["TÀI SẢN NGẮN HẠN", "100", "", "10.626.141.721.085", "13.998.282.834.060"],
+      ["Tiền và các khoản tương đương tiền", "110", "1", "2.231.448.721.940", "1.905.249.672.046"],
+      ["Tiền", "111", "", "129.748.721.940", "765.249.672.046"],
+      ["Các khoản tương đương tiền", "112", "", "2.101.700.000.000", "1.140.000.000.000"],
+      ["Các khoản đầu tư tài chính ngắn hạn", "120", "2", "6.359.261.420.147", "8.248.873.292.933"]
+    ]
+  }
+}

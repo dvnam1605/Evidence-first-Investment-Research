@@ -19,7 +19,7 @@
   "counts": {
     "digital_pdfs_committed": 12,
     "scanned_pdfs_committed": 4,
-    "complex_tables_committed": 6,
+    "complex_tables_committed": 11,
     "excel_reports_committed": 2,
     "real_reports_with_pipeline_expected": 5
   },
@@ -285,7 +285,7 @@
       "kind": "digital_pdf",
       "storage": "committed",
       "path": "tests/fixtures/processing/golden/digital/real_vi_bctc_sample.pdf",
-      "role": "Synthetic Vietnamese native-text financial report",
+      "role": "Real Vietnamese native-text digital financial report",
       "sha256": "3d8c155076fefdccb40de9b45492c2e2b7a7d0c42e54dab32d53158beb7123df",
       "source": "synthetic",
       "expect": {
@@ -312,7 +312,7 @@
       "kind": "digital_pdf",
       "storage": "committed",
       "path": "tests/fixtures/processing/golden/digital/real_vi_ir_announcement.pdf",
-      "role": "Synthetic Vietnamese native-text IR announcement",
+      "role": "Real Vietnamese native-text IR disclosure announcement",
       "sha256": "a74c9a6a921599adaa5e3bc41e2bd1f0ad4e539a66fc5ca55d1fdae3d68d8e36",
       "source": "synthetic",
       "expect": {
@@ -419,34 +419,92 @@
       "source": "synthetic"
     },
     {
+      "id": "fpt_raw_fy_2025_consol_bs_p8",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/fy_2025_consol_bs_p8.json",
+      "role": "FY 2025 consolidated financial statements",
+      "sha256": "16fe2e53a3859abd86cccef06652e5ad516b6bd3be7ca63370781219eea26997",
+      "source": "vetted_transcription",
+      "format": "raw_table_json",
+      "source_pdf_sha256": "630f61f6ef9f07d5c593c3bf8f65bad1d56ecbb091921296ed5c4e830ea070a4"
+    },
+    {
+      "id": "fpt_raw_fy_2025_separate_bs_p8",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/fy_2025_separate_bs_p8.json",
+      "role": "FY 2025 separate financial statements",
+      "sha256": "13ef695b26cf7fd5d2904ff3d9ef4fdbef7c4e0dbcdb6b1c7ea0ab6417271764",
+      "source": "vetted_transcription",
+      "format": "raw_table_json",
+      "source_pdf_sha256": "4fce6b21101d5918eac95363e10c337a3d31366d94439baf1dbdf5f990d43211"
+    },
+    {
+      "id": "fpt_raw_q1_2026_consol_bs_p3",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/q1_2026_consol_bs_p3.json",
+      "role": "Q1 2026 consolidated financial statements",
+      "sha256": "8ffb0bc6ccd64adca3cb39446fd27aeba3766268aa2c0d97847c067f495c027b",
+      "source": "vetted_transcription",
+      "format": "raw_table_json",
+      "source_pdf_sha256": "5adaee07d5aa1c5a16b2992ac20db480dc03dd9c02e61d0f361e6df479ec7012"
+    },
+    {
+      "id": "fpt_raw_q1_2026_separate_bs_p4",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/q1_2026_separate_bs_p4.json",
+      "role": "Q1 2026 separate financial statements",
+      "sha256": "32223a76c908d5ffb3100ec5eefe616aaf923be9bad27aaa916bcaa2c09eef40",
+      "source": "vetted_transcription",
+      "format": "raw_table_json",
+      "source_pdf_sha256": "11c9709914cdc5f1561f47045283598c359f7466f94e5ffbc21893e28b0315fa"
+    },
+    {
       "id": "fpt_raw_q2_2026_consol_bs_p3",
       "kind": "complex_table",
       "storage": "committed",
       "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_bs_p3.json",
-      "role": "Vetted FPT raster transcription for reconstruction",
+      "role": "Q2 2026 consolidated FS",
       "sha256": "bbcec152cb5bd731851422f09d0f0eeb38ea947c9c378b56fd96813b72e943d1",
       "source": "vetted_transcription",
-      "format": "raw_table_json"
-    },
-    {
-      "id": "fpt_raw_q2_2026_consol_is_p7",
-      "kind": "complex_table",
-      "storage": "committed",
-      "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_is_p7.json",
-      "role": "Vetted FPT raster transcription for reconstruction",
-      "sha256": "49586518eb2db29655a23bd5454e64f65592e7c7d8102bd2521e3212b45b3110",
-      "source": "vetted_transcription",
-      "format": "raw_table_json"
+      "format": "raw_table_json",
+      "source_pdf_sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60"
     },
     {
       "id": "fpt_raw_q2_2026_consol_cf_p10",
       "kind": "complex_table",
       "storage": "committed",
       "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_cf_p10.json",
-      "role": "Vetted FPT raster transcription for reconstruction",
+      "role": "Q2 2026 consolidated FS",
       "sha256": "6db1045957252c190c2fb02f6e4eb5de33daf67cf932621eb9e70e50227b6a84",
       "source": "vetted_transcription",
-      "format": "raw_table_json"
+      "format": "raw_table_json",
+      "source_pdf_sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60"
+    },
+    {
+      "id": "fpt_raw_q2_2026_consol_is_p7",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_consol_is_p7.json",
+      "role": "Q2 2026 consolidated FS",
+      "sha256": "49586518eb2db29655a23bd5454e64f65592e7c7d8102bd2521e3212b45b3110",
+      "source": "vetted_transcription",
+      "format": "raw_table_json",
+      "source_pdf_sha256": "024b14f8ceffa46d1df30180c8dee17c2f191a8c6dbe839aa9254afe051fdb60"
+    },
+    {
+      "id": "fpt_raw_q2_2026_separate_bs_p4",
+      "kind": "complex_table",
+      "storage": "committed",
+      "path": "tests/fixtures/processing/tables/fpt_raw/q2_2026_separate_bs_p4.json",
+      "role": "Q2 2026 separate financial statements",
+      "sha256": "d246a3bee2812b98ea7410627f0d1edd6f76f6d0dd962517590ef9ac718e0f6d",
+      "source": "vetted_transcription",
+      "format": "raw_table_json",
+      "source_pdf_sha256": "6034d952ce3655bc089b483ca9643f855293eeb8f93fd8d50474a3dfee9f9fd8"
     },
     {
       "id": "fs_balance_sheet",
@@ -454,7 +512,7 @@
       "storage": "committed",
       "path": "tests/fixtures/processing/golden/excel/fs_balance_sheet.xlsx",
       "role": "Excel fs_balance_sheet",
-      "sha256": "29e1ec684cd5740527795fafda98f561f126dddd65570244df72d90b5b5d6fa9",
+      "sha256": "4feee160bc104ccda5d75cfa3d8700932bb6c6b02a1088d0823a5a2335f81beb",
       "source": "synthetic",
       "expect": {
         "file_type": "XLSX",
@@ -478,7 +536,7 @@
       "storage": "committed",
       "path": "tests/fixtures/processing/golden/excel/fs_income_statement.xlsx",
       "role": "Excel fs_income_statement",
-      "sha256": "343313a92862ba54ff46700f55a64db4547baf952ed145dac1e1958a4f344ceb",
+      "sha256": "d376be5ea4c6bfa8714c4273d493a4c5e64c7788a5b70cbbe9c0591bde17cb35",
       "source": "synthetic",
       "expect": {
         "file_type": "XLSX",

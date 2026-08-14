@@ -63,6 +63,29 @@ class DocumentProcessingJobRepository:
         model = result.scalar_one_or_none()
         return self._to_domain(model) if model else None
 
+    async def mark_stale_processing_failed(
+        self,
+        *,
+        stale_before: datetime,
+    ) -> int:
+        result = await self._session.execute(
+            select(DocumentProcessingJobModel).where(
+                DocumentProcessingJobModel.status == ProcessingStatus.PROCESSING.value,
+                DocumentProcessingJobModel.updated_at < stale_before,
+            )
+        )
+        models = tuple(result.scalars())
+        if not models:
+            return 0
+        now = datetime.now(tz=UTC)
+        for model in models:
+            model.status = ProcessingStatus.FAILED.value
+            model.finished_at = now
+            model.error = "stale_processing_recovered"
+            model.updated_at = now
+        await self._session.flush()
+        return len(models)
+
     async def mark_processing(
         self,
         *,
@@ -91,6 +114,8 @@ class DocumentProcessingJobRepository:
         job_id: uuid.UUID,
         status: ProcessingStatus,
         error: str | None = None,
+        parser: str | None = None,
+        parser_version: str | None = None,
     ) -> DocumentProcessingJob:
         DocumentProcessingJob.validate_terminal_status(status)
         model = await self._session.get(DocumentProcessingJobModel, job_id)
@@ -99,6 +124,10 @@ class DocumentProcessingJobRepository:
 
         now = datetime.now(tz=UTC)
         model.status = status.value
+        if parser is not None:
+            model.parser = parser
+        if parser_version is not None:
+            model.parser_version = parser_version
         model.finished_at = now
         model.error = error
         model.updated_at = now

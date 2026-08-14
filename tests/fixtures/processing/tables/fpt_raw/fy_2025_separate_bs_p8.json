@@ -1,0 +1,39 @@
+{
+  "source": {
+    "ticker": "FPT",
+    "document": "FY 2025 separate financial statements",
+    "pdf": "20260319_fpt_bctc_rieng_nam_2025_da_kiem_toan_f67c6c805b_4fce6b21101d.pdf",
+    "sha256": "4fce6b21101d5918eac95363e10c337a3d31366d94439baf1dbdf5f990d43211",
+    "usage": "visually verified balance-sheet region; native find_tables returns none",
+    "pdf_page": 8,
+    "printed_page": 5,
+    "section": "balance_sheet",
+    "verified_against": "source PDF page 8 / printed 5"
+  },
+  "context": {
+    "surrounding_text": "BẢNG CÂN ĐỐI KẾ TOÁN RIÊNG\nTại ngày 31 tháng 12 năm 2025\nĐơn vị: VND",
+    "section_hint": "balance_sheet"
+  },
+  "table": {
+    "page": 8,
+    "table_index": 0,
+    "table_id": "fpt-fy2025-separate:p8:t0",
+    "source_sha256": "4fce6b21101d5918eac95363e10c337a3d31366d94439baf1dbdf5f990d43211",
+    "bbox": [45, 100, 550, 355],
+    "extractor_name": "vetted_visual_region",
+    "extractor_version": "2026-08-12",
+    "source_label": "BẢNG CÂN ĐỐI KẾ TOÁN RIÊNG",
+    "confidence": 0.8,
+    "status": "NEEDS_REVIEW",
+    "warnings": ["partial_statement_region", "cell_bboxes_estimated_from_verified_region"],
+    "matrix": [
+      ["BẢNG CÂN ĐỐI KẾ TOÁN RIÊNG"],
+      ["Mã số", "TÀI SẢN", "Thuyết minh", "2025 VND", "2024 VND"],
+      ["100", "TÀI SẢN NGẮN HẠN", "", "13.998.282.834.060", "12.764.466.007.896"],
+      ["110", "Tiền và các khoản tương đương tiền", "3", "1.905.249.672.046", "1.877.791.791.943"],
+      ["111", "Tiền", "", "765.249.672.046", "275.791.791.943"],
+      ["112", "Các khoản tương đương tiền", "", "1.140.000.000.000", "1.602.000.000.000"],
+      ["120", "Đầu tư tài chính ngắn hạn", "", "8.101.109.390.000", "6.996.211.170.000"]
+    ]
+  }
+}

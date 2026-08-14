@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -93,6 +94,27 @@ class CrawlerSettings(BaseSettings):
     rate_limit_seconds: float = 1.0
 
 
+class ProcessingSettings(BaseSettings):
+    """Optional, auditable sidecars for documents whose tables are raster-only."""
+
+    model_config = SettingsConfigDict(
+        env_prefix="PROCESSING_",
+        env_file=_ENV_FILES,
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
+
+    raw_table_dir: Path | None = None
+    stale_job_after_seconds: int = Field(default=3600, gt=0)
+
+    @field_validator("raw_table_dir", mode="before")
+    @classmethod
+    def empty_path_to_none(cls, value: object) -> object:
+        if value == "":
+            return None
+        return value
+
+
 class AppSettings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=_ENV_FILES,
@@ -118,6 +140,7 @@ class Settings:
         llm: LLMSettings | None = None,
         embedding: EmbeddingSettings | None = None,
         crawler: CrawlerSettings | None = None,
+        processing: ProcessingSettings | None = None,
     ) -> None:
         self.app = app or AppSettings()
         self.database = database or DatabaseSettings()
@@ -126,6 +149,7 @@ class Settings:
         self.llm = llm or LLMSettings()
         self.embedding = embedding or EmbeddingSettings()
         self.crawler = crawler or CrawlerSettings()
+        self.processing = processing or ProcessingSettings()
 
 
 @lru_cache
